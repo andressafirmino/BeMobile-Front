@@ -1,5 +1,7 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+/* eslint-enable */
 import App from './App.tsx';
 import ResetStyle from './style/ResetStyle.ts';
 import GlobalStyle from './style/GlobalStyle.ts';
@@ -10,4 +12,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <GlobalStyle />
     <App />
   </React.StrictMode>,
-)
+);
