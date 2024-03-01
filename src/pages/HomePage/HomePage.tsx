@@ -1,3 +1,10 @@
+import SearchBox from '../../components/Search/Search';
+import { HomeContainer } from './style';
+
 export default function HomePage() {
-  return <h1></h1>;
+  return (
+    <HomeContainer>
+      <SearchBox />
+    </HomeContainer>
+  );
 }
