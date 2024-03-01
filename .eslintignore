@@ -11,5 +11,5 @@ prisma/**/*
 docker-compose*
 Dockerfile*
 nginx.conf
-src/assets/Header.svg
+src/assets/*.svg
 index.html
