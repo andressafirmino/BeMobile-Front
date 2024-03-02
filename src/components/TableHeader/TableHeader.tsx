@@ -1,6 +1,9 @@
+import useWindowsResize from '../../hooks/useWindowsResize';
 import { Date, Display, Name, Phone, Photo, Position, TableHeaderContainer } from './style';
 
 export default function TableHeader() {
+  const { width } = useWindowsResize();
+  console.log(width);
   return (
     <TableHeaderContainer>
       <Photo>FOTO</Photo>
