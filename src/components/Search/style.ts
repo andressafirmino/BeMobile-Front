@@ -7,9 +7,7 @@ export const SearchContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 92px;
-  left: 32px;
+  margin-top: 32px;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
