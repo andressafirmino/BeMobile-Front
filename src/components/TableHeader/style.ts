@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { GoDotFill } from 'react-icons/go';
 
 export const TableHeaderContainer = styled.div`
   width: calc(100vw - 64px);
@@ -55,4 +56,7 @@ export const Phone = styled.div`
   @media screen and (max-width: 855px) {
     width: calc(100vw - 64px);
   }
+`;
+export const Dot = styled(GoDotFill)`
+  font-size: 8px;
 `;
