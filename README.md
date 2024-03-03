@@ -1,8 +1,16 @@
 # Resume
 This is a Technical Test for Be's Front-End, which consists of building a table view with data that will come from a simulated API, in json-server.
 
-![Home page](https://i.imgur.com/9IFvsUo.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/9IFvsUo.png" alt="Imagem" style="max-width: 100%; height: auto;">
+<figcaption>
+
 [Project link](https://github.com/andressafirmino/BeMobile-Front)
+
+</figcaption>
+</div>
+
+
 
 # How it works?
 This project was developed to meet a simplified employee search. It only has a single entity: `employees`.
@@ -14,27 +22,41 @@ The entity has only one route:
 #### In addition to the page shown above, the application also has layout options for 3 other screen sizes.
 
 - Screen size between 600px and 855px:
-![](https://i.imgur.com/eUxiyoJ.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/eUxiyoJ.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
 - Screen size between 375px and 600px:
-![](https://i.imgur.com/OhIXQQ0.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/OhIXQQ0.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
-- Screen size smaller than 375px:
-![](https://i.imgur.com/uV41rvR.png)
+- Screen size smaller than 375px: 
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/uV41rvR.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
 #### Features.
 
 - Search by name, position or phone number:
-![](https://i.imgur.com/wbyll9m.png)
-![](https://i.imgur.com/AbPpzfU.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/wbyll9m.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/AbPpzfU.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
 #### Show or hide data by clicking arrow.
 
 - When clicking on the arrow, a hidden bar will appear containing the position, date of admission and telephone number:
-![](https://i.imgur.com/xqan8V9.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/xqan8V9.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
 - When clicking on the arrow, the bar will be hidden again:
-![](https://i.imgur.com/HmC4APh.png)
+<div style="display: block; text-align: center;">
+    <img src="https://i.imgur.com/HmC4APh.png" alt="Imagem" style="max-width: 100%; height: auto;">
+</div>
 
 # Motivation
 Além de participar do processo da Be, nesse projeto tive a oportunidade de trabalhar e aprimorar meus conhecimentos em responsividade com ReactJS.
