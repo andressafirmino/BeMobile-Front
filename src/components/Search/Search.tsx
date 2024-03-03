@@ -1,11 +1,12 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { EmployeesContext } from '../../context/employees';
 import EmployeeFilter from '../../utils/EmployeeFilter';
+import { SearchContext } from '../../context/search';
 import { SearchContainer, SearchIcon, SearchInput, SearchInputBox, Title } from './style';
 
 export default function SearchBox() {
   const { employees, setFilteredEmployees } = useContext(EmployeesContext);
-  const [searchText, setSearchText] = useState<string>('');
+  const { closeSearch, setCloseSearch, searchText, setSearchText } = useContext(SearchContext);
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,7 +17,14 @@ export default function SearchBox() {
     <SearchContainer>
       <Title>Funcionários</Title>
       <form onSubmit={handleFormSubmit}>
-        <SearchInputBox>
+        <SearchInputBox
+          onClick={() => {
+            if (closeSearch === 'none') setCloseSearch('block');
+            else {
+              setCloseSearch('none');
+            }
+          }}
+        >
           <SearchInput
             placeholder="Pesquisar"
             type="text"
