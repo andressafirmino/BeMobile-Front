@@ -6,7 +6,7 @@ import { EmployeesTableContainer } from './style';
 
 export default function EmployeesTable() {
   const { employees, filteredEmployees } = useContext(EmployeesContext);
-  console.log(employees);
+
   return (
     <EmployeesTableContainer>
       <TableHeader />
