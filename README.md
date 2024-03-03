@@ -10,7 +10,23 @@ This is a Technical Test for Be's Front-End, which consists of building a table 
 </figcaption>
 </div>
 
+# General requirements
 
+1. Use ReactJS or Vanilla JS to build the project;
+
+2. The view must be responsive;
+
+3. The table must contain the following columns:
+
+ - image (user's thumb);
+ - name;
+ - office
+ - admission date;
+ - phone.
+
+4. It must also be possible to search the table using an input. The search input must allow filtering data by name, position and telephone number;
+
+5. Dates and phones must be formatted in the front-end and not in the API.
 
 # How it works?
 This project was developed to meet a simplified employee search. It only has a single entity: `employees`.
@@ -59,7 +75,7 @@ The entity has only one route:
 </div>
 
 # Motivation
-Além de participar do processo da Be, nesse projeto tive a oportunidade de trabalhar e aprimorar meus conhecimentos em responsividade com ReactJS.
+In addition to participating in the Be process, in this project I had the opportunity to work and improve my knowledge in responsiveness with ReactJS.
 
 # Technologies used
 For this project, the following were used:
