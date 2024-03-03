@@ -4,4 +4,3 @@ export const EmployeesTableContainer = styled.div`
   margin-top: 32px;
   background-color: #f0f0f0;
 `;
-export const TableRowContainer = styled.div``;

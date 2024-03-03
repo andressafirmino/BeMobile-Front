@@ -12,7 +12,7 @@ export default function EmployeesTable() {
       <TableHeader />
       {filteredEmployees.length > 0
         ? filteredEmployees.map((employee, i) => <TableRow key={i} {...employee} />)
-        : filteredEmployees.length === 0 && employees.map((employee, i) => <TableRow key={i} {...employee} />)}
+        : employees.map((employee, i) => <TableRow key={i} {...employee} />)}
     </EmployeesTableContainer>
   );
 }
