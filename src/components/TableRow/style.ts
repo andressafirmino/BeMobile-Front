@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   box-shadow: 0px 1px 2px 0px #00000033;
   background: #ffffff;
+  border-bottom: 0.5px solid #dfdfdf;
   @media screen and (max-width: 375px) {
     width: calc(100vw - 40px);
   }
@@ -91,7 +92,6 @@ export const Icon = styled.div`
 `;
 export const HiddenBarContainer = styled.div`
   width: calc(100vw - 64px);
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 32px;
