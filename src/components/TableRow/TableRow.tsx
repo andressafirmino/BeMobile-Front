@@ -1,6 +1,7 @@
 import { SlArrowDown } from 'react-icons/sl';
 import Logo from '../../assets/Header.svg';
 import useWindowsResize from '../../hooks/useWindowsResize';
+import { EmployeeDataType } from '../../protocols';
 import {
   Container,
   Date,
@@ -17,7 +18,7 @@ import {
   Title,
 } from './style';
 
-export default function TableRow() {
+export default function TableRow({ name, job, admission_date, phone }: EmployeeDataType) {
   const { width } = useWindowsResize();
 
   return (
@@ -26,12 +27,12 @@ export default function TableRow() {
         <Photo>
           <img src={Logo} />
         </Photo>
-        <Name>Andressa</Name>
+        <Name>{name}</Name>
         {width && width > 855 ? (
           <Display>
-            <Position>FullStack</Position>
-            <Date>00/00/0000</Date>
-            <Phone>+00 (00) 00000-0000</Phone>
+            <Position>{job}</Position>
+            <Date>{admission_date}</Date>
+            <Phone>{phone}</Phone>
           </Display>
         ) : (
           <Icon>
@@ -42,15 +43,15 @@ export default function TableRow() {
       <HiddenBarContainer>
         <HiddenBar>
           <Title>Cargo</Title>
-          <Subtitle>FullStack</Subtitle>
+          <Subtitle>{job}</Subtitle>
         </HiddenBar>
         <HiddenBar>
           <Title>Data de admissão</Title>
-          <Subtitle>00/00/0000</Subtitle>
+          <Subtitle>{admission_date}</Subtitle>
         </HiddenBar>
         <HiddenBar>
           <Title>Telefone</Title>
-          <Subtitle>+00 (00) 00000-0000</Subtitle>
+          <Subtitle>{phone}</Subtitle>
         </HiddenBar>
       </HiddenBarContainer>
     </Container>

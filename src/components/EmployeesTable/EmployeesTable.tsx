@@ -10,7 +10,9 @@ export default function EmployeesTable() {
   return (
     <EmployeesTableContainer>
       <TableHeader />
-      <TableRow />
+      {employees.map((employee, i) => (
+        <TableRow key={i} {...employee} />
+      ))}
     </EmployeesTableContainer>
   );
 }
