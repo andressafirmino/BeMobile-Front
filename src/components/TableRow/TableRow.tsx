@@ -4,6 +4,7 @@ import Logo from '../../assets/Header.svg';
 import useWindowsResize from '../../hooks/useWindowsResize';
 import { EmployeeDataType } from '../../protocols';
 import FormatDate from '../../utils/FormatDate';
+import FormatPhone from '../../utils/FormatPhone';
 import {
   Container,
   Date,
@@ -34,7 +35,7 @@ export default function TableRow({ name, job, admission_date, phone }: EmployeeD
           <Display>
             <Position>{job}</Position>
             <Date>{FormatDate(admission_date)}</Date>
-            <Phone>{phone}</Phone>
+            <Phone>{FormatPhone(phone)}</Phone>
           </Display>
         )}
         {width && width <= 855 && !selected && (
@@ -60,7 +61,7 @@ export default function TableRow({ name, job, admission_date, phone }: EmployeeD
           </HiddenBar>
           <HiddenBar>
             <Title>Telefone</Title>
-            <Subtitle>{phone}</Subtitle>
+            <Subtitle>{FormatPhone(phone)}</Subtitle>
           </HiddenBar>
         </HiddenBarContainer>
       )}
