@@ -10,6 +10,7 @@ export const TableHeaderContainer = styled.div`
   align-items: center;
   font-size: 16px;
   font-weight: 500;
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   @media screen and (max-width: 855px) {
     padding: 0 12px 0 0;

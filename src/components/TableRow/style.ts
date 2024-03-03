@@ -20,6 +20,7 @@ export const TableRowContainer = styled.div`
   align-items: center;
   font-size: 16px;
   font-weight: 400;
+  font-family: 'Roboto', sans-serif;
   color: #1c1c1c;
   @media screen and (max-width: 855px) {
     padding: 0 12px 0 0;
@@ -104,6 +105,7 @@ export const HiddenBar = styled.div`
   align-items: center;
   padding: 0 32px;
   position: relative;
+  font-family: 'Roboto', sans-serif;
   p {
     font-size: 16px;
     color: #1c1c1c;

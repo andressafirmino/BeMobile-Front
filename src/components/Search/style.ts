@@ -29,6 +29,7 @@ export const Title = styled.div`
   font-size: 24px;
   font-weight: 500;
   line-height: 28.13px;
+  font-family: 'Roboto', sans-serif;
 
   @media screen and (max-width: 600px) {
     margin: 10px 0 28px;
@@ -48,6 +49,7 @@ export const SearchInput = styled.input`
   ::placeholder {
     font-size: 16px;
     font-weight: 400;
+    font-family: 'Roboto', sans-serif;
     line-height: 18.75px;
     color: #9e9e9e;
   }
