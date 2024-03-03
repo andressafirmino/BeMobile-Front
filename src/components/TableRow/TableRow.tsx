@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Logo from '../../assets/Header.svg';
 import useWindowsResize from '../../hooks/useWindowsResize';
 import { EmployeeDataType } from '../../protocols';
+import FormatDate from '../../utils/FormatDate';
 import {
   Container,
   Date,
@@ -22,7 +23,6 @@ import {
 export default function TableRow({ name, job, admission_date, phone }: EmployeeDataType) {
   const { width } = useWindowsResize();
   const [selected, setSelected] = useState<boolean>(false);
-
   return (
     <Container>
       <TableRowContainer>
@@ -33,22 +33,22 @@ export default function TableRow({ name, job, admission_date, phone }: EmployeeD
         {width && width > 855 && (
           <Display>
             <Position>{job}</Position>
-            <Date>{admission_date}</Date>
+            <Date>{FormatDate(admission_date)}</Date>
             <Phone>{phone}</Phone>
           </Display>
         )}
-        {width && width < 855 && !selected && (
+        {width && width <= 855 && !selected && (
           <Icon onClick={() => setSelected(true)}>
             <SlArrowDown />
           </Icon>
         )}
-        {width && width < 855 && selected && (
+        {width && width <= 855 && selected && (
           <Icon onClick={() => setSelected(false)}>
             <SlArrowUp />
           </Icon>
         )}
       </TableRowContainer>
-      {selected && (
+      {width && width <= 855 && selected && (
         <HiddenBarContainer>
           <HiddenBar>
             <Title>Cargo</Title>
@@ -56,7 +56,7 @@ export default function TableRow({ name, job, admission_date, phone }: EmployeeD
           </HiddenBar>
           <HiddenBar>
             <Title>Data de admissão</Title>
-            <Subtitle>{admission_date}</Subtitle>
+            <Subtitle>{FormatDate(admission_date)}</Subtitle>
           </HiddenBar>
           <HiddenBar>
             <Title>Telefone</Title>
