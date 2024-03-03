@@ -1,6 +1,6 @@
 import { GoDotFill } from 'react-icons/go';
 import useWindowsResize from '../../hooks/useWindowsResize';
-import { Date, Display, Name, Phone, Photo, Position, TableHeaderContainer } from './style';
+import { Date, Display, Icon, Name, Phone, Photo, Position, TableHeaderContainer } from './style';
 
 export default function TableHeader() {
   const { width } = useWindowsResize();
@@ -16,7 +16,9 @@ export default function TableHeader() {
           <Phone>TELEFONE</Phone>
         </Display>
       ) : (
-        <GoDotFill />
+        <Icon>
+          <GoDotFill />
+        </Icon>
       )}
     </TableHeaderContainer>
   );
