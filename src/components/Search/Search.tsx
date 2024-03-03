@@ -21,7 +21,7 @@ export default function SearchBox() {
             placeholder="Pesquisar"
             type="text"
             onChange={(e) => {
-              EmployeeFilter(searchText, employees, setFilteredEmployees);
+              EmployeeFilter(e.target.value, employees, setFilteredEmployees);
               setSearchText(e.target.value);
             }}
             value={searchText}
