@@ -4,11 +4,15 @@ import { EmployeeDataType } from '../protocols';
 interface EmloyeesContextProps {
   employees: EmployeeDataType[];
   setEmployees: React.Dispatch<React.SetStateAction<EmployeeDataType[]>>;
+  filteredEmployees: EmployeeDataType[];
+  setFilteredEmployees: React.Dispatch<React.SetStateAction<EmployeeDataType[]>>;
 }
 
 export const EmployeesContext = createContext<EmloyeesContextProps>({
   employees: [],
   setEmployees: () => {},
+  filteredEmployees: [],
+  setFilteredEmployees: () => {},
 });
 
 interface EmployeeProviderProps {
@@ -17,12 +21,15 @@ interface EmployeeProviderProps {
 
 export default function EmployeeProvider({ children }: EmployeeProviderProps) {
   const [employees, setEmployees] = useState<EmployeeDataType[]>([]);
+  const [filteredEmployees, setFilteredEmployees] = useState<EmployeeDataType[]>([]);
 
   return (
     <EmployeesContext.Provider
       value={{
         employees,
         setEmployees,
+        filteredEmployees,
+        setFilteredEmployees,
       }}
     >
       {children}
