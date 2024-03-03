@@ -4,12 +4,10 @@ import EmployeesTable from '../../components/EmployeesTable/EmployeesTable';
 import SearchBox from '../../components/Search/Search';
 import { getEmployees } from '../../services/homeApi';
 import { EmployeesContext } from '../../context/employees';
-import { SearchContext } from '../../context/search';
 import { HomeContainer } from './style';
 
 export default function HomePage() {
-  const { setEmployees, setFilteredEmployees } = useContext(EmployeesContext);
-  const { setCloseSearch, setSearchText } = useContext(SearchContext);
+  const { setEmployees } = useContext(EmployeesContext);
   useEffect(() => {
     async function fetchEmployees() {
       const response = await getEmployees();
@@ -18,11 +16,7 @@ export default function HomePage() {
     fetchEmployees();
   }, []);
   return (
-    <HomeContainer
-      onClick={() => {
-        setCloseSearch('none'), setFilteredEmployees([]), setSearchText('');
-      }}
-    >
+    <HomeContainer>
       <SearchBox />
       <EmployeesTable />
     </HomeContainer>
