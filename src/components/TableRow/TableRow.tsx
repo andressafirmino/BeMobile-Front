@@ -1,6 +1,5 @@
 import { SlArrowDown, SlArrowUp } from 'react-icons/sl';
 import { useState } from 'react';
-import Logo from '../../assets/Header.svg';
 import useWindowsResize from '../../hooks/useWindowsResize';
 import { EmployeeDataType } from '../../protocols';
 import FormatDate from '../../utils/FormatDate';
@@ -21,14 +20,14 @@ import {
   Title,
 } from './style';
 
-export default function TableRow({ name, job, admission_date, phone }: EmployeeDataType) {
+export default function TableRow({ name, job, admission_date, phone, image }: EmployeeDataType) {
   const { width } = useWindowsResize();
   const [selected, setSelected] = useState<boolean>(false);
   return (
     <Container>
       <TableRowContainer>
         <Photo>
-          <img src={Logo} />
+          <img src={image} />
         </Photo>
         <Name>{name}</Name>
         {width && width > 855 && (
