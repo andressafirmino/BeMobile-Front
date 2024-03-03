@@ -8,4 +8,5 @@ export type EmployeeDataType = {
   job: string;
   admission_date: string;
   phone: string;
+  image: string;
 };
