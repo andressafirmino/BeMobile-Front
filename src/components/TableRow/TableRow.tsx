@@ -48,20 +48,22 @@ export default function TableRow({ name, job, admission_date, phone }: EmployeeD
           </Icon>
         )}
       </TableRowContainer>
-      <HiddenBarContainer>
-        <HiddenBar>
-          <Title>Cargo</Title>
-          <Subtitle>{job}</Subtitle>
-        </HiddenBar>
-        <HiddenBar>
-          <Title>Data de admissão</Title>
-          <Subtitle>{admission_date}</Subtitle>
-        </HiddenBar>
-        <HiddenBar>
-          <Title>Telefone</Title>
-          <Subtitle>{phone}</Subtitle>
-        </HiddenBar>
-      </HiddenBarContainer>
+      {selected && (
+        <HiddenBarContainer>
+          <HiddenBar>
+            <Title>Cargo</Title>
+            <Subtitle>{job}</Subtitle>
+          </HiddenBar>
+          <HiddenBar>
+            <Title>Data de admissão</Title>
+            <Subtitle>{admission_date}</Subtitle>
+          </HiddenBar>
+          <HiddenBar>
+            <Title>Telefone</Title>
+            <Subtitle>{phone}</Subtitle>
+          </HiddenBar>
+        </HiddenBarContainer>
+      )}
     </Container>
   );
 }

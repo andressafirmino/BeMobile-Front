@@ -91,7 +91,6 @@ export const Icon = styled.div`
 `;
 export const HiddenBarContainer = styled.div`
   width: calc(100vw - 64px);
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 32px;
