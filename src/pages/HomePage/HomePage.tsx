@@ -1,13 +1,13 @@
 /// <reference types="node" />
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import EmployeesTable from '../../components/EmployeesTable/EmployeesTable';
 import SearchBox from '../../components/Search/Search';
 import { getEmployees } from '../../services/homeApi';
+import { EmployeesContext } from '../../context/employees';
 import { HomeContainer } from './style';
 
 export default function HomePage() {
-  const [employees, setEmployees] = useState(null);
-  console.log(employees);
+  const { setEmployees } = useContext(EmployeesContext);
   useEffect(() => {
     async function fetchEmployees() {
       const response = await getEmployees();
