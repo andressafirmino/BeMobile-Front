@@ -3,8 +3,10 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -14,11 +16,11 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    /* 'import/no-unresolved': 'error',
-    'import/order': 'warn', */
+    'import/no-unresolved': 'error',
+    'import/order': 'warn',
     'import/no-named-as-default-member': 'off',
     '@typescript-eslint/no-namespace': 'off',
-    /* 'import/newline-after-import': ['error'], */
+    'import/newline-after-import': ['error'],
     'lines-between-class-members': ['error', 'always'],
   },
   settings: {
