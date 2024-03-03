@@ -13,7 +13,6 @@ export default function EmployeeFilter(
       employee.name.toLowerCase().includes(valueLower) ||
       employee.phone.toLowerCase().includes(valueLower),
   );
-  console.log(filteredEmployees);
   setFilteredEmployees(filteredEmployees);
-  return <></>;
+  return;
 }

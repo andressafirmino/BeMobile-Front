@@ -10,13 +10,9 @@ export default function useWindowsResize() {
         width: window.innerWidth,
       });
     }
-
     window.addEventListener('resize', handleResize);
-
     handleResize();
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   return windowsResize;
 }
